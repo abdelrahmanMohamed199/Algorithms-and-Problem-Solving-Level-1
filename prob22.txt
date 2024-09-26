@@ -1,0 +1,27 @@
+void readTriangleSides(float& a, float& b)
+{
+    cout << "Enter the first triangle side \n";
+    cin >> a;
+    cout << "Enter the second triangle side \n";
+    cin >> b;
+}
+
+float circleAreaInscribedInIsoscelesTriangle(float triangleSide1, float triangleSide2)
+{
+    const float PI = 3.14;
+    float circleArea = (PI * pow(triangleSide2, 2) / 4) * ((2 * triangleSide1 - triangleSide2) / (2 * triangleSide1 + triangleSide2));
+    return circleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    float a, b;
+    readTriangleSides(a, b);
+    printResult(circleAreaInscribedInIsoscelesTriangle(a, b));
+    return 0;
+}

@@ -1,0 +1,52 @@
+int readNumberFromUser()
+{
+    int num;
+    cout << "Enter a number\n";
+    cin >> num;
+    return num;
+}
+
+int sumOddNums(int num)
+{
+    int sumOfOdds = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (i % 2 != 0)
+        {
+            sumOfOdds += i;
+        }
+    }
+    return sumOfOdds;
+}
+
+void printResult(int sum)
+{
+    cout << "sum of odd numbers = " << sum;
+}
+
+int main()
+{
+    printResult(sumOddNums(readNumberFromUser()));
+    return 0;
+}
+***********************************************************************************
+another solution:
+int num;
+cout << "enter a number\n";
+cin >> num;
+while (num < 1)
+{
+    cout << "Please enter a positive integer number\n";
+    cin >> num;
+}
+int i = 1;
+int sumOfOddNums = 0;
+while (i <= num)
+{
+    if (i % 2 != 0)
+    {
+        sumOfOddNums += i;
+    }
+    i++;
+}
+cout << sumOfOddNums;

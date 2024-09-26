@@ -1,0 +1,9 @@
+void powerOf2_3_4()
+{
+    double num;
+    cout << "Enter a number\n";
+    cin >> num;
+    cout << round(pow(num, 2)) << endl;
+    cout << round(pow(num, 3)) << endl;
+    cout << round(pow(num, 4));
+}

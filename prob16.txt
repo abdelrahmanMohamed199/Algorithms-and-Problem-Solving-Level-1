@@ -1,0 +1,26 @@
+void readRectDimensions(float& rectangleSide, float& diagonal)
+{
+    cout << "Enter the side length\n";
+    cin >> rectangleSide;
+    cout << "Enter the diagonal\n";
+    cin >> diagonal;
+}
+
+float calcRecteAreaByDiagonal(float rectangleSide, float diagonal)
+{
+    float rectangleArea = rectangleSide * sqrt(pow(diagonal, 2) - pow(rectangleSide, 2));
+    return rectangleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Rectangle area = " << area << endl;
+}
+
+int main()
+{
+    float rectSide, diagonal;
+    readRectDimensions(rectSide, diagonal);
+    printResult(calcRecteAreaByDiagonal(rectSide, diagonal));
+    return 0;
+}

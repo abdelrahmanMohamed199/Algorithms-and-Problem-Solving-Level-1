@@ -1,0 +1,25 @@
+float readCircumference()
+{
+    float circumference;
+    cout << "Enter the circumference\n";
+    cin >> circumference;
+    return circumference;
+}
+
+float circleAreaByCircumference(float circumference)
+{
+    const float PI = 3.14;
+    float circleArea = floor(pow(circumference, 2) / (4 * PI));
+    return circleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    printResult(circleAreaByCircumference(readCircumference()));
+    return 0;
+}

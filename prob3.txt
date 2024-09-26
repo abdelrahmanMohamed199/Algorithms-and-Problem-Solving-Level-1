@@ -1,0 +1,21 @@
+enum enNumType {even, odd};
+
+int readNumFromUser()
+{
+    int num;
+    cout << "Enter a number\n";
+    cin >> num;
+    return num;
+}
+
+enNumType checkNumType(int num)
+{
+    if (num % 2 == 0) return enNumType::even;
+    else return enNumType::odd;
+}
+
+void printNumType(enNumType type)
+{
+    if (type == enNumType::even) cout << "Number type is even\n";
+    else cout << "Number type is odd\n";
+}

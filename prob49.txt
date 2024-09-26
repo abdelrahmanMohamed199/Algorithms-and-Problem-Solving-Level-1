@@ -1,0 +1,11 @@
+int pinCode;
+float customerBalance = 7500;
+cout << "Enter your PIN code\n";
+cin >> pinCode;
+if (pinCode == 1234)
+{
+    cout << "Your balance is " << customerBalance << endl;
+}else 
+{
+    cout << "Worng PIN code\n";
+}

@@ -1,0 +1,47 @@
+int readNumberFromUser()
+{
+    int num;
+    cout << "Enter a number\n";
+    cin >> num;
+    return num;
+}
+
+int sumEvenNums(int num)
+{
+    int sumOfEven = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (i % 2 == 0)
+        {
+            sumOfEven += i;
+        }
+    }
+    return sumOfEven;
+}
+
+int main()
+{
+    cout << "sum of even numbers = " << sumEvenNums(readNumberFromUser());
+    return 0;
+}
+**************************************************************************************
+another solution:
+ int num;
+ cout << "enter a number\n";
+ cin >> num;
+ while (num < 1)
+ {
+     cout << "Please enter a positive integer number\n";
+     cin >> num;
+ }
+ int i = 1;
+ int sumOfEvenNums = 0;
+ while (i <= num)
+ {
+     if (i % 2 == 0)
+     {
+         sumOfEvenNums += i;
+     }
+     i++;
+ }
+ cout << sumOfEvenNums;

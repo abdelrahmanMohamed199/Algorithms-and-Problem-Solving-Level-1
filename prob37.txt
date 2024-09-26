@@ -1,0 +1,11 @@
+float num;
+float sum = 0;
+cout << "enter a number\n";
+cin >> num;
+while (num != -99)
+{
+    sum += num;
+    cout << "enter another number\n";
+    cin >> num;
+}
+cout << "Total sum of numbers = " << sum;

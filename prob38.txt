@@ -1,0 +1,29 @@
+int readPositiveNum(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+    return num;
+}
+
+bool isPrimeNum(int num)
+{
+    int m = round(num / 2);
+    for (int i = 2; i <= m; i++)
+    {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+string printResult(int num)
+{
+    if (isPrimeNum(num))
+        return "its a prime number\n";
+    else
+        return "its not a prime number\n";
+}

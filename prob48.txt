@@ -1,0 +1,23 @@
+int readpositiveNum(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+    return num;
+}
+
+float calcMonthlyPayment(int loanAmount, int numOfMonths)
+{
+    return (float)loanAmount / numOfMonths;
+}
+
+int main()
+{
+    int loanAmount = readpositiveNum("Enter the loan amount");
+    int numOfMonths = readpositiveNum("Enter number of months needed");
+    cout << "Amount of money per month is " << calcMonthlyPayment(loanAmount, numOfMonths);
+    return 0;
+}

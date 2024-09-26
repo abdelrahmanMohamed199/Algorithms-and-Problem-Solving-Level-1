@@ -1,0 +1,25 @@
+float readCircleRadius()
+{
+    float radius;
+    cout << "Enter the circle radius\n";
+    cin >> radius;
+    return radius;
+}
+
+float circleArea(float radius)
+{
+    const float PI = 3.14;
+    float circleArea = ceil(PI * pow(radius, 2));
+    return circleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    printResult(circleArea(readCircleRadius()));
+    return 0;
+}

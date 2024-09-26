@@ -1,0 +1,15 @@
+int penny, nickel, dime, quarter, dollar;
+cout << "enter penny value\n";
+cin >> penny;
+cout << "enter nickel value\n";
+cin >> nickel;
+cout << "enter dime value\n";
+cin >> dime;
+cout << "enter quarter value\n";
+cin >> quarter;
+cout << "enter dollar value\n";
+cin >> dollar;
+float totalPennies = penny + nickel * 5 + dime * 10 + quarter * 25 + dollar * 100;
+float totalDollars = totalPennies / 100;
+cout << totalPennies << " Pennies\n";
+cout << totalDollars << " Dollars\n";

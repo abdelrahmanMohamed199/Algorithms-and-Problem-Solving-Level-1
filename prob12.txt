@@ -1,0 +1,28 @@
+void readTwoNums(int& num1, int& num2)
+{
+    cout << "Enter the first number\n";
+    cin >> num1;
+    cout << "Enter the second number\n";
+    cin >> num2;
+}
+
+int maxOfTwoNums(int num1, int num2)
+{
+    if (num1 > num2)
+        return num1;
+    else
+        return num2;
+}
+
+void printResult(int max)
+{
+    cout << "The bigger number is " << max;
+}
+
+int main()
+{
+    int num1, num2;
+    readTwoNums(num1, num2);
+    printResult(maxOfTwoNums(num1, num2));
+    return 0;
+}

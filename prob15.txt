@@ -1,0 +1,25 @@
+void readRectDimensions(float& num1, float& num2)
+{
+    cout << "Enter the length\n";
+    cin >> num1;
+    cout << "Enter the width\n";
+    cin >> num2;
+}
+
+float calcRectArea(float rectLength, float rectWidth)
+{
+    return rectLength * rectWidth;
+}
+
+void printResult(float area)
+{
+    cout << "Rectangle area = " << area << endl;
+}
+
+int main()
+{
+    float rectLength, rectWidth;
+    readRectDimensions(rectLength, rectWidth);
+    printResult(calcRectArea(rectLength, rectWidth));
+    return 0;
+}

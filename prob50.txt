@@ -1,0 +1,50 @@
+string readPINcode()
+{
+    string PIN;
+    cout << "Enter the PIN code" << endl;
+    cin >> PIN;
+    return PIN;
+}
+
+bool login(string PIN)
+{
+    short counter = 3;
+    if (PIN == "1234")
+    {
+        return 1;
+    }
+    else
+    {
+        counter--;
+        do
+        {
+            cout << "Wrong PIN code you have " << counter << " tries\n";
+            PIN = readPINcode();
+            if (PIN == "1234")
+                return 1;
+            counter--;
+        } while (counter != 0);
+        return 0;
+    }
+}
+
+string getResultOfLogin(string PIN)
+{
+    int balance = 7500;
+    if (login(PIN))
+    {
+        system("color 2F");
+        return "Your balance is " + to_string(balance);
+    }
+    else
+    {
+        system("color 4F");
+        return "You entered wrong PIN code for 3 times ,so your card is locked";
+    }
+}
+
+int main()
+{
+    cout << getResultOfLogin(readPINcode());
+    return 0;
+}

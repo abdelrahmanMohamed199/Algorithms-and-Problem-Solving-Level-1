@@ -1,0 +1,25 @@
+float readsquareSideLength()
+{
+    float squareSideLength;
+    cout << "Enter the square side length\n";
+    cin >> squareSideLength;
+    return squareSideLength;
+}
+
+float circleAreaInscribedInSquare(float squareSideLength)
+{
+    const float PI = 3.14;
+    float circleArea = ceil((PI * pow(squareSideLength, 2)) / 4);
+    return circleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    printResult(circleAreaInscribedInSquare(readsquareSideLength()));
+    return 0;
+}

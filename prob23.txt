@@ -1,0 +1,31 @@
+void readTriangleSides(float& a, float& b, float& c)
+{
+    cout << "Enter the first triangle side \n";
+    cin >> a;
+    cout << "Enter the second triangle side \n";
+    cin >> b;
+    cout << "Enter the third triangle side \n";
+    cin >> c;
+}
+
+float circleAreaAroundArbitraryTriangle(float triangleSide1, float triangleSide2, float triangleSide3)
+{
+    const float PI = 3.14;
+    float p = (triangleSide1 + triangleSide2 + triangleSide3) / 2;
+    float x = (p - triangleSide1) * (p - triangleSide2) * (p - triangleSide3);
+    float circleArea = round(PI * pow((triangleSide1 * triangleSide2 * triangleSide3 / (4 * sqrt(p * x))), 2));
+    return circleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    float a, b, c;
+    readTriangleSides(a, b, c);
+    printResult(circleAreaAroundArbitraryTriangle(a, b, c));
+    return 0;
+}

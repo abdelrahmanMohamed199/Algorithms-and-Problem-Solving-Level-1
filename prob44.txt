@@ -1,0 +1,54 @@
+enum enDays { Sunday = 1, Monday = 2, Tuesday = 3, Wednesday = 4, Thursday = 5, Friday = 6, Saturday = 7 };
+
+void printDaysList()
+{
+    cout << "*********************\n";
+    cout << "choose your day number\n";
+    cout << "1- Sunday\n";
+    cout << "2- Monday\n";
+    cout << "3- Tuesday\n";
+    cout << "4- Wednesday\n";
+    cout << "5- Thursday\n";
+    cout << "6- Friday\n";
+    cout << "7- Saturday\n";
+    cout << "*********************\n";
+    cout << "Your choice? ";
+}
+
+enDays readDayNumber()
+{
+    short D;
+    cin >> D;
+    return (enDays)D;
+}
+
+string getDayName(enDays day)
+{
+    switch (day)
+    {
+    case enDays::Sunday:
+        return "Sunday";
+    case enDays::Monday:
+        return "Monday";
+    case enDays::Tuesday:
+        return "Tuesday";
+    case enDays::Wednesday:
+        return "Wednesday";
+    case enDays::Thursday:
+        return "Thursday";
+    case enDays::Friday:
+        return "Friday";
+    case enDays::Saturday:
+        return "Saturday";
+    default:
+        return "Not a day";
+    }
+}
+
+int main()
+{
+    printDaysList();
+    cout << "today is " << getDayName(readDayNumber());
+    
+    return 0;
+}

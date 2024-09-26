@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+void printMyName(string name)
+{
+    cout << "Your name is: " << name;
+}
+
+int main()
+{   
+    printMyName("Abdo");
+    return 0;
+}

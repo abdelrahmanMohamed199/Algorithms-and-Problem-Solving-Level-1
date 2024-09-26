@@ -1,0 +1,43 @@
+struct stTimeUnits
+{
+    short days;
+    short hours;
+    short minutes;
+    short seconds;
+};
+
+int readpositiveNum(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+    return num;
+}
+
+stTimeUnits secondsToDaysHoursMinAndSeconds(int numOfSeconds)
+{
+    stTimeUnits duration;
+    const int secondsPerDay = 24 * 60 * 60;
+    const short secondsPerHour = 60 * 60;
+    const short secondsPerMinutes = 60;
+    duration.days = numOfSeconds / secondsPerDay;
+    unsigned short remainder = numOfSeconds % secondsPerDay;
+    duration.hours = remainder / secondsPerHour;
+    remainder %= secondsPerHour;
+    duration.minutes = remainder / secondsPerMinutes;
+    duration.seconds = remainder % secondsPerMinutes;
+    return duration;
+}
+
+int main()
+{
+    stTimeUnits duration = secondsToDaysHoursMinAndSeconds(readpositiveNum("enter number of seconds"));
+    cout << "number of days = " << duration.days << endl;
+    cout << "number of hours = " << duration.hours << endl;
+    cout << "number of minutes = " << duration.minutes << endl;
+    cout << "number of seconds = " << duration.seconds << endl;
+    return 0;
+}

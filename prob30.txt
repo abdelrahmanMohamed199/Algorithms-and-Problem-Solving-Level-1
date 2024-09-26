@@ -1,0 +1,28 @@
+int readNumberFromUser()
+{
+    int num;
+    cout << "Enter a number\n";
+    cin >> num;
+    while (num < 1)
+{
+    cout << "Please enter a positive integer number\n";
+    cin >> num;
+}
+    return num;
+}
+
+int calcFactorial(int num)
+{
+    int result = 1;
+    for (int i = num; i > 1; i--)
+    {
+        result *= i;
+    }
+    return result;
+}
+
+int main()
+{
+    cout << "Factorial of your number = " << calcFactorial(readNumberFromUser());
+    return 0;
+}

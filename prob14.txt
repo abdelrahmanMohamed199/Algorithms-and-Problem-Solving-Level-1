@@ -1,0 +1,31 @@
+void readTwoNums(int& num1, int& num2)
+{
+    cout << "Enter the first number\n";
+    cin >> num1;
+    cout << "Enter the second number\n";
+    cin >> num2;
+}
+
+void swapTwoNums(int& num1, int& num2)
+{
+    int temp;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+}
+
+void printResult(int num1, int num2)
+{
+    cout << "number 1 = " << num1 << endl;
+    cout << "number 2 = " << num2 << endl;
+}
+
+int main()
+{
+    int num1, num2;
+    readTwoNums(num1, num2);
+    printResult(num1, num2);
+    swapTwoNums(num1, num2);
+    printResult(num1, num2);
+    return 0;
+}

@@ -1,0 +1,20 @@
+float readStudentMark()
+{
+    float mark;
+    cout << "Enter youtr mark\n";
+    cin >> mark;
+    return mark;
+}
+
+bool checkStudentMark(float mark)
+{
+    return (mark >= 50); 
+}
+
+void printResult(float mark)
+{
+    if (checkStudentMark(mark))
+        cout << "Pass\n";
+    else
+        cout << "Fail\n";
+}

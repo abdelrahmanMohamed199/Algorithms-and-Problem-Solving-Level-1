@@ -1,0 +1,25 @@
+void readNumbersFromUser(int& base, int& power)
+{
+    cout << "Enter the base\n";
+    cin >> base;
+    cout << "Enter the power\n";
+    cin >> power;  
+}
+
+int calcPowerOfNum(int& base, int& power)
+{
+    int result = 1;
+    for (int i = 0; i < power; i++)
+    {
+        result *= base;
+    }
+    return result;
+}
+
+int main()
+{
+    int base, power;
+    readNumbersFromUser(base, power);
+    cout << "Result = " << calcPowerOfNum(base, power);
+    return 0;
+}

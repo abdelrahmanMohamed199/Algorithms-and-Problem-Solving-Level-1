@@ -1,0 +1,6 @@
+float billValue;
+float serviceFee = 1.1, salesTax = 1.16;
+cout << "Enter the bill value\n";
+cin >> billValue;
+float totalValue = billValue * serviceFee * salesTax;
+cout << "the total bill is " << totalValue;

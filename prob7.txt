@@ -1,0 +1,17 @@
+int readNumber()
+{
+    int num;
+    cout << "Enter a number\n";
+    cin >> num;
+    return num;
+}
+
+float calcHalfOfNum(int num)
+{
+    return (float)num / 2;
+}
+
+void printResult(int num)
+{
+    cout << "Half number " + to_string(num) + " is " + to_string(calcHalfOfNum(num));
+}

@@ -1,0 +1,26 @@
+void readTriangleDimensions(float& base, float& height)
+{
+    cout << "Enter the triangle base\n";
+    cin >> base;
+    cout << "Enter the triangle height\n";
+    cin >> height;
+}
+
+float calcTriangleArea(float b, float h)
+{
+    float triangleArea = 0.5 * b * h;
+    return triangleArea;
+}
+
+void printResult(float area)
+{
+    cout << "Triangle area = " << area << endl;
+}
+
+int main()
+{
+    float base, height;
+    readTriangleDimensions(base, height);
+    printResult(calcTriangleArea(base, height));
+    return 0;
+}

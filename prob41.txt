@@ -1,0 +1,23 @@
+float readpositiveNum(string msg)
+{
+    float num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+    return num;
+}
+
+float calcNumsOfDays(float hours)
+{
+    return hours / 24;
+}
+
+int main()
+{
+    float numberOfHours = readpositiveNum("Enter number of hours as a positive number");
+    cout << "number of days = " << calcNumsOfDays(numberOfHours) << endl;
+    cout << "number of weeks = " << calcNumsOfDays(numberOfHours) / 7 << endl;
+    return 0;
+}

@@ -1,0 +1,26 @@
+struct stPersonInfo
+{
+    short age;
+    bool hasDriverLicense;
+};
+
+stPersonInfo readPersonInfo()
+{
+    stPersonInfo info;
+    cout << "Enter your age\n";
+    cin >> info.age;
+    cout << "Do you have a driver license?\n";
+    cin >> info.hasDriverLicense;
+    return info;
+}
+
+bool isAccepted(stPersonInfo info)
+{
+    return (info.age > 21 && info.hasDriverLicense);
+}
+
+void printResult(stPersonInfo info)
+{
+    if (isAccepted(info)) cout << "Hired\n";
+    else cout << "Rejected\n";
+}

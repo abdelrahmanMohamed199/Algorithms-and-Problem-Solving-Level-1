@@ -1,0 +1,44 @@
+void read3Marks(int marks[3])
+{
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Enter number " << i + 1 << endl;
+        cin >> marks[i];
+    } 
+}
+
+int sumOf3Marks(int marks[3])
+{
+    int sum = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        sum += marks[i];
+    }
+    return sum;
+}
+
+float averageOf3Marks(int marks[3])
+{    
+    return (float)sumOf3Marks(marks) / 3;
+}
+
+bool isPassed(int marks[3])
+{
+    return (averageOf3Marks(marks) >= 50);
+}
+
+void printAverage(int marks[3])
+{
+    if (isPassed(marks))
+        cout << "Pass\n";
+    else
+        cout << "Fail\n";
+}
+
+int main()
+{
+    int marks[3];
+    read3Marks(marks);
+    printAverage(marks);
+    return 0;
+}

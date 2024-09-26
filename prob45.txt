@@ -1,0 +1,68 @@
+enum enMonths { Jan = 1, Feb = 2, Mar = 3, Apr = 4, May = 5, Jun = 6, Jul = 7, Aug = 8, Sep = 9, Oct = 10, Nov = 11, Dec = 12 };
+
+void printMonthsList()
+{
+    cout << "*********************\n";
+    cout << "choose your month number\n";
+    cout << "1- Jan\n";
+    cout << "2- Feb\n";
+    cout << "3- Mar\n";
+    cout << "4- Apr\n";
+    cout << "5- May\n";
+    cout << "6- Jun\n";
+    cout << "7- Jul\n";
+    cout << "8- Aug\n";
+    cout << "9- Sep\n";
+    cout << "10- Oct\n";
+    cout << "11- Nov\n";
+    cout << "12- Dec\n";
+    cout << "*********************\n";
+    cout << "Your choice? ";
+}
+
+enMonths readMonthNumber()
+{
+    short mon;
+    cin >> mon;
+    return (enMonths)mon;
+}
+
+string getMonthName(enMonths month)
+{
+    switch (month)
+    {
+    case enMonths::Jan:
+        return "Jan";
+    case enMonths::Feb:
+        return "Feb";
+    case enMonths::Mar:
+        return "Mar";
+    case enMonths::Apr:
+        return "Apr";
+    case enMonths::May :
+        return "May";
+    case enMonths::Jun:
+        return "Jun";
+    case enMonths::Jul:
+        return "Jul";
+    case enMonths::Aug:
+        return "Aug";
+    case enMonths::Sep:
+        return "Sep";
+    case enMonths::Oct:
+        return "Oct";
+    case enMonths::Nov:
+        return "Nov";
+    case enMonths::Dec:
+        return "Dec";
+    default:
+        return "Not a month";
+    }
+}
+
+int main()
+{
+    printMonthsList();
+    cout << "Your choise is " << getMonthName(readMonthNumber());
+    return 0;
+}

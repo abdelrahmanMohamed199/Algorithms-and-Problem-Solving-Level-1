@@ -1,0 +1,7 @@
+ float totalBill, cashPaid;
+ cout << "Enter the total bill\n";
+ cin >> totalBill;
+ cout << "Enter the cash paid\n";
+ cin >> cashPaid;
+ float remainder = cashPaid - totalBill;
+ cout << "the remainder = " << remainder;
